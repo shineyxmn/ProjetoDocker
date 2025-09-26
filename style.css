@@ -1,0 +1,57 @@
+/* Paleta roxo e azul */
+:root {
+  --roxo: #6c5ce7;
+  --azul: #0984e3;
+  --claro: #f0f0f5;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--claro);
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, var(--roxo), var(--azul));
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: #dfe6e9;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+footer {
+  background: var(--roxo);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
