@@ -3,32 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vantagens - Mini Site Roxo e Azul</title>
+  <title>Vantagens - Projeto Docker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Vantagens</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="conceitos.html">Conceitos</a>
-      <a href="vantagens.html">Vantagens</a>
-      <a href="relatorio-actions.html">Relatório</a>
-    </nav>
-  </header>
-
-  <main>
-    <h2>Por que usar Docker e GitHub Actions?</h2>
-    <ul>
-      <li>✅ Facilidade de empacotamento e distribuição.</li>
-      <li>✅ Padronização do ambiente.</li>
-      <li>✅ Automação de testes e builds.</li>
-      <li>✅ Integração simples com GitHub Pages.</li>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Projeto Docker</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="conceitos.html">Conceitos</a></li>
+      <li><a href="vantagens.html" class="active">Vantagens</a></li>
     </ul>
-  </main>
+  </nav>
 
+  <!-- Conteúdo -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Vantagens do Docker</h2>
+      <p>
+        O uso do Docker trouxe inúmeras melhorias para equipes de desenvolvimento e operações.  
+        Abaixo estão as principais vantagens de adotar essa tecnologia:
+      </p>
+
+      <ul style="text-align:left; max-width:700px; margin:20px auto;">
+        <li><strong>Padronização:</strong> o ambiente de execução é sempre o mesmo, evitando o famoso "na minha máquina roda" (inclusive enfrento isso no trabalho prof kkkkkkkk).</li>
+        <li><strong>Eficiência:</strong> containers consomem menos recursos que máquinas virtuais, permitindo rodar mais aplicações no mesmo servidor.</li>
+        <li><strong>Agilidade:</strong> criação e destruição de containers acontece em segundos, acelerando testes e deploys.</li>
+        <li><strong>Integração Contínua:</strong> integra facilmente com pipelines de CI/CD, garantindo entregas rápidas e seguras.</li>
+        <li><strong>Escalabilidade:</strong> fácil de aumentar ou reduzir a quantidade de containers de acordo com a demanda.</li>
+        <li><strong>Segurança:</strong> isolamento de processos garante mais proteção contra falhas e vulnerabilidades.</li>
+      </ul>
+
+      <p>
+        Por isso, o Docker é considerado essencial em ambientes de DevOps e nuvem, tornando os times mais produtivos e reduzindo custos de infraestrutura.  
+      </p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
   <footer>
-    <p>Mini Site Roxo e Azul © 2025</p>
+    <p>© 2025 Projeto Docker | Yasmin de Oliveira</p>
   </footer>
+
+  <script>
+  const items = document.querySelectorAll(".hero-content ul li");
+  items.forEach((item, index) => {
+    item.style.opacity = 0;
+    setTimeout(() => {
+      item.style.transition = "opacity 0.6s ease";
+      item.style.opacity = 1;
+    }, index * 300);
+  });
+</script>
+
 </body>
 </html>

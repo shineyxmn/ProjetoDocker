@@ -3,27 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Site Roxo e Azul</title>
+  <title>Projeto Docker</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Animação do botão */
+    .btn {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Texto digitado */
+    .typed-text {
+      color: #1abc9c;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 10px;
+      min-height: 30px;
+    }
+
+    /* Imagem da hero */
+    .hero img {
+      margin-top: 20px;
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+  </style>
 </head>
 <body>
+  <!-- NAVBAR -->
   <header>
-    <h1>Mini Site Roxo & Azul</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="conceitos.html">Conceitos</a>
-      <a href="vantagens.html">Vantagens</a>
-      <a href="relatorio-actions.html">Relatório</a>
+    <nav class="navbar">
+      <h1 class="logo">Projeto Docker</h1>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="conceitos.html">Conceitos</a></li>
+        <li><a href="vantagens.html">Vantagens</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="hero">
-    <h2>Bem-vindo ao Mini Site!</h2>
-    <p>Este site foi criado para demonstrar HTML, CSS, Docker e GitHub Actions.</p>
-  </main>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Bem-vindo ao Projeto Docker 🚀</h2>
+      <p class="typed-text"></p>
+      <a href="conceitos.html" class="btn">Começar</a>
+      <br>
+      <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Logo Docker">
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>Mini Site Roxo e Azul © 2025</p>
+    <p>© 2025 - Projeto Docker | Yasmin de Oliveira</p>
   </footer>
+
+  <!-- SCRIPT ANIMAÇÃO -->
+  <script>
+    const text = "Containers, portabilidade e eficiência na palma da sua mão!";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.querySelector(".typed-text").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 60);
+      }
+    }
+    window.onload = typeWriter;
+  </script>
 </body>
 </html>

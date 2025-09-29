@@ -3,33 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conceitos - Mini Site Roxo e Azul</title>
+  <title>Conceitos - Projeto Docker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Conceitos</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="conceitos.html">Conceitos</a>
-      <a href="vantagens.html">Vantagens</a>
-      <a href="relatorio-actions.html">Relatório</a>
-    </nav>
-  </header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Projeto Docker</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="conceitos.html" class="active">Conceitos</a></li>
+      <li><a href="vantagens.html">Vantagens</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <section>
-      <h2>O que é Docker?</h2>
-      <p>Docker é uma plataforma que permite empacotar, distribuir e executar aplicações em contêineres.</p>
-    </section>
-    <section>
-      <h2>O que é GitHub Actions?</h2>
-      <p>É uma ferramenta de automação de fluxos de trabalho diretamente no GitHub, usada aqui para testar o build do Docker.</p>
-    </section>
-  </main>
+  <!-- Conteúdo -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Conceitos de Docker</h2>
+      <p>
+        O Docker revolucionou a forma como desenvolvemos e executamos aplicações.  
+        Ele introduziu a ideia de containers, que são ambientes isolados onde o software roda com todas as suas dependências.
+      </p>
 
+      <p>
+        Para entender melhor, aqui estão alguns conceitos fundamentais:
+      </p>
+
+      <ul style="text-align:left; max-width:700px; margin:20px auto;">
+        <li><strong>Imagem Docker:</strong> um pacote imutável que contém o sistema, bibliotecas e o código da aplicação.</li>
+        <li><strong>Container:</strong> a execução de uma imagem; é leve, rápido e independente do sistema operacional.</li>
+        <li><strong>Volumes:</strong> permitem armazenar dados de forma persistente fora do container.</li>
+        <li><strong>Rede Docker:</strong> possibilita que containers conversem entre si de forma segura e controlada.</li>
+        <li><strong>Compose:</strong> ferramenta que permite orquestrar múltiplos containers de uma só vez.</li>
+      </ul>
+
+      <p>
+        Em resumo, o Docker facilita a padronização e garante que a aplicação funcione da mesma forma em qualquer lugar.  
+      </p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
   <footer>
-    <p>Mini Site Roxo e Azul © 2025</p>
+    <p>© 2025 Projeto Docker | Yasmin de Oliveira</p>
   </footer>
+
+  <script>
+  const textC = "Entenda a base dos containers e como o Docker mudou a forma de desenvolver.";
+  let j = 0;
+  function typeWriterC() {
+    if (j < textC.length) {
+      document.querySelector(".hero-content h2").textContent += textC.charAt(j);
+      j++;
+      setTimeout(typeWriterC, 50);
+    }
+  }
+  window.onload = typeWriterC;
+</script>
+
 </body>
 </html>
